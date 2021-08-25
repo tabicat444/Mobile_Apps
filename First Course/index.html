@@ -1,0 +1,167 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+	    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" href="ScoobyDoo.min.css">
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+<!--Welcome page-->
+        <section data-role="page" data-theme="c" id = "pgWelcome"> <!--1-->
+            <header data-role="header"> 
+                <h1>Welcome!</h1>
+                <nav data-role="navbar">
+                    <ul>
+                        <li><a href="#pgSignUp" data-role="button" data-icon="arrow-l" data-transition="flip">Sign Up Here!</a></li>
+                        <li><a href="#pgLogIn" data-role="button" data-icon="arrow-r" data-transition="flip">Sign In Here!</a></li>
+                    </ul>
+                </nav>
+            </header>   
+            <article role = "main" class = "ui-content">
+                <p>Welcome to the website! We're currently under construction, don't mind the dust. </p>
+                <img src = "scoobydoo.png" alt="Scooby Doo smiling" >
+            </article>    
+            <footer data-role="footer" data-position="fixed">
+                <h4> </h4>
+            </footer>
+        </section>
+<!--Log in page-->
+        <section data-role="page" data-theme="d" id = "pgLogIn"> <!--2-->
+            <header data-role="header" data-add-back-btn = "true"> 
+                <h1>Welcome back!</h1>
+            </header> 
+            <article role = "main" class = "ui-content">
+                <form id = "formLogIn">
+                    <label for="userid">Username:</label>
+                        <input required type="text" placeholder="jdoe" name="userid" id="userid" >
+                    <label for="pass">Password:</label>
+                        <input required type="text" placeholder = "ScoobyDooRules" name="pass" id="pass">
+                </form>
+                <button data-icon="check" id="saveName">Submit </button>
+                <a href="#pgHome" data-role="button" data-icon="home" data-transition="flip">Home</a>
+            </article>
+
+            <footer data-role="footer" data-position="fixed">
+                <h4> </h4>
+            </footer>
+        </section>
+<!-- Sign up page-->
+        <section data-role="page" data-theme="e" id = "pgSignUp"> <!--2-->
+            <header data-role="header" data-add-back-btn = "true"> 
+                <h1>Join us!</h1>
+            </header>
+    
+            <article role = "main" class = "ui-content">
+                <form id = "formSignUp">
+                    <label for="EmailSignup">Email Address:</label>
+                        <!--JS needs "id", use name for accessibility-->
+                        <input required type="text" placeholder="janedoe@gmail.com" name="EmailSignup" id="EmailSignup">
+                    <label for="fnameSignUp">First Name:</label>
+                        <input required type="text" placeholder = "Jane" name="fnameSignUp" id="fnameSignUp">
+                    <label for="lnameSignUp">Last Name:</label>
+                        <input required type="text" placeholder = "Doe" name="lnameSignUp" id="lnameSignUp">
+                    <label for="useridSignUp">Username:</label>
+                        <input required type="text" placeholder="jdoe" name="useridSignUp" id="useridSignUp">
+                    <label for="passSignUp">Password:</label>
+                        <input required type="password" placeholder = "ScoobyDooRules!" name="passSignUp" id="passSignUp">
+                    <label for="passwordconfSignUp">Confirm Password:</label>
+                        <input required type="password" placeholder = "ScoobyDooRules!" name="passwordconfSignUp" id="passwordconfSignUp">
+                    <input type="submit" data-icon= "check" value="Create Account">
+                    <input type="reset" data-icon = "delete" value="Clear form">
+                </form>
+            </article>
+    
+            <footer data-role="footer" data-position="fixed">
+                <h4> </h4>
+            </footer>
+        </section>
+<!-- Home page-->
+        <section data-role="page" data-theme="d" id = "pgHome">
+            <header data-role="header"> 
+                <h1>Home</h1>
+                <a href="#pgOptions" data-icon="gear" data-iconpos= "notext" data-transition="pop" class = "ui-btn-right">Options</a>
+                <nav data-role="navbar">
+                    <ul>
+                        <li><a href="#pgHome" data-icon="home" class="ui-btm-active ui-state-persist" data-transition="flip">Home</a></li>
+                        <li><a href="#pgSave" data-icon="action" data-transition="flip">Save</a></li>
+                        <li><a href="#pgView" data-icon = "bars" data-transition="flip">View</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <article role = "main" class = "ui-content">
+                <p> Welcome home! We're, like, happy you're here!</p> 
+                <img src = "shaggy.jpg">
+            </article>
+            <footer data-role="footer" data-position="fixed">
+                <h4> </h4>
+            </footer>
+        </section>
+<!--Save page-->
+        <section data-role="page" data-theme="e" id = "pgSave"><!--4-->
+            <header data-role="header"> 
+                <h1>Save</h1>
+                <nav data-role="navbar">
+                    <ul>
+                        <li><a href="#pgHome" data-icon ="home" data-transition="flip">Back Home</a></li>
+                        <li><a href="#pgSave" data-icon="action" data-transition="flip" class="ui-btm-active ui-state-persist">Save</a></li>
+                        <li><a href="#pgView" data-icon = "bars"  data-transition="flip">View</a></li>
+                    </ul>
+            </header>
+            <article role = "main" class = "ui-content">
+                <p>This page is where we'll be able to save new updates.</p>
+                <h2>Are you human or are you dancer?</h2>
+            <nav data-role="navbar">
+                <ul>
+                    <li><a href= "https://s.clipartkey.com/mpngs/s/115-1159049_resources-transparent-frames-illustrations-clip-art-human-resource.png" data-transition="flip">Human</a></li>
+                    <li><a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlzPwp--I3ZCoNSFhOUr6FEGpjbCXuQIn-Gw&usqp=CAU" data-transition="flip">Dancer</a></li>
+                </ul>
+            </nav>
+                
+            </article>
+
+            <footer data-role="footer" data-position="fixed">
+            <h4> </h4>
+            </footer>
+        </section>
+<!--View page-->
+        <section data-role="page" data-theme="e" id = "pgView"><!--5-->
+            <header data-role="header"> 
+                <h1>View </h1>
+                <nav data-role="navbar">
+                    <ul>
+                        <li><a href="#pgHome" data-icon ="home" data-transition="flip">Back Home</a></li>
+                        <li><a href="#pgSave" data-icon="action" data-transition="flip">Save</a></li>
+                        <li><a href="#pgView" data-icon = "bars" data-transition="flip" class="ui-btm-active ui-state-persist">View</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <article role = "main" class = "ui-content">
+                This page is where we'll be able to view old content. <br>
+                <img src = "daphne.jpg">
+            </article>
+
+            <footer data-role="footer" data-position="fixed">
+                <h4> </h4>
+            </footer>
+        </section>
+<!--Options page-->
+        <section data-role="page" data-theme="c" data-dialog="true" id = "pgOptions"><!--6-->
+            <header data-role="header"> 
+                <h1>Options </h1>
+            </header>
+            <article role = "main" class = "ui-content">
+                This page will house settings, administative information, and potentially a feedback form.
+                <a href="#pgWelcome" data-role="button" data-transition="flip">Log Out</a>
+            </article>
+            <footer data-role="footer" data-position="fixed">
+                <h4> </h4>
+            </footer>  
+        </section>     
+    </body>
+</html>
